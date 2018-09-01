@@ -1,0 +1,10 @@
+version: "2.3"
+services:
+  test:
+    image: dotfiles
+    network_mode: "bridge"
+    build:
+      context: .
+    volumes:
+      - $PWD:/dotfiles
+    command: /bin/zsh

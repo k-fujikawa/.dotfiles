@@ -1,0 +1,22 @@
+[user]
+    name = Kazuki Fujikawa
+    useConfigOnly = true
+[color]
+	ui = auto
+[alias]
+    c = commit
+    co = checkout
+    st = status
+    cm = commit -m
+    ca = commit -a 
+    l1 = log --oneline
+    conflicts = !git ls-files -u | cut -f 2 | sort -u
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+[core]
+    excludesfile = ~/.gitignore
+[merge]
+    tool="vimdiff"

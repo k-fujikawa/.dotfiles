@@ -1,0 +1,33 @@
+"*":
+  "atom-beautify":
+    erb:
+      indent_size: 2
+    general:
+      _analyticsUserId: "3f357a1a-3ca5-41c7-a5a3-16d2e24b4980"
+  core:
+    telemetryConsent: "no"
+  editor:
+    fontSize: 13
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "39e736f6-f1a2-2eba-3266-98af830f9473"
+  "markdown-mindmap":
+    theme: "colorful"
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-preview-plus":
+    breakOnSingleNewline: true
+    enableLatexRenderingByDefault: true
+    useGitHubStyle: true
+  runner:
+    extensions:
+      vsql: "vsql"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false

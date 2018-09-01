@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    machine:
+      image: circleci/classic:edge
+    environment:
+      - IMAGENAME: dotfiles
+    steps:
+      - checkout
+      - run:
+          name: Build application Docker image
+          command: |
+              docker-compose build
+              docker-compose run test zsh -c """
+              make install
+              make install
+              source ~/.zshrc
+              make test
+              """
+
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+      - build
+  scheduled-workflow:
+    triggers:
+      - schedule:
+          cron: "0 1 * * *" # UTC (am 10:00 JST every day)
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
