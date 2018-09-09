@@ -11,12 +11,7 @@ jobs:
           name: Build application Docker image
           command: |
               docker-compose build
-              docker-compose run test zsh -c """
-              make install
-              make install
-              source ~/.zshrc
-              make test
-              """
+              docker-compose run test
 
 workflows:
   version: 2
