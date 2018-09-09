@@ -1,10 +1,7 @@
 brew "zsh"
 brew "nvim"
-brew "pyenv"
-brew "rbenv"
 brew "git-lfs"
 brew "tig"
-brew "peco"
 brew "direnv"
 brew "mas"
 brew "htop"
@@ -19,3 +16,6 @@ cask "evernote"
 cask "atom"
 cask "docker"
 cask "google-backup-and-sync"
+
+mas "Slack", id: 803453959
+mas "Magnet", id: 441258766
