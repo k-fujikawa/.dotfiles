@@ -1,3 +1,6 @@
+DOTFILEDIR ?= $(realpath ../$(dir $(lastword $(MAKEFILE_LIST))))
+
+
 git-setup:
 	@printf '$(YELLOW_ON)\n==> Start to setup git...\n$(COLOR_OFF)'
 	@test "$(DOTFILEDIR)/git/.gitconfig" = `readlink $(HOME)/.gitconfig` || ( \

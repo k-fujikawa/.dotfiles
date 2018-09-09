@@ -1,5 +1,7 @@
+DOTFILEDIR ?= $(realpath ../$(dir $(lastword $(MAKEFILE_LIST))))
+BIN_PATH ?= $(DOTFILEDIR)/bin
 PT_VERSION = 2.1.5
-PT_PATH = $(HOME)/bin/pt
+PT_PATH = $(BIN_PATH)/pt
 
 ifeq ($(shell uname), Darwin)
     PT_FILENAME = pt_darwin_amd64
@@ -12,7 +14,7 @@ endif
 
 pt-install:
 	@printf '$(YELLOW_ON)\n==> Start to install pt...\n$(COLOR_OFF)'
-	@test -e $(PT_PATH) || (cd $(HOME)/bin && \
+	@test -e $(PT_PATH) || (cd $(BIN_PATH) && \
 		curl -L $(PT_URL) -o pt.tar.gz && \
 		tar zxvf pt.tar.gz && \
 		mv $(PT_FILENAME)/pt pt && \

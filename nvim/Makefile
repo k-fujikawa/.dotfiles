@@ -1,5 +1,8 @@
+DOTFILEDIR ?= $(realpath ../$(dir $(lastword $(MAKEFILE_LIST))))
+BIN_PATH ?= $(DOTFILEDIR)/bin
+BUILD_PATH ?= $(DOTFILEDIR)/build
 NVIM_VERSION = v0.3.1
-NVIM_PATH = $(HOME)/bin/nvim
+NVIM_PATH = $(BIN_PATH)/nvim
 NVIMRC_PATH = $(HOME)/.config/nvim
 DEIN_VERSION = 2.0
 DEIN_PATH = $(BUILD_PATH)/tmp/installer.sh
@@ -23,7 +26,7 @@ neovim-install:
 		chmod +x nvim.appimage && \
 		./nvim.appimage --appimage-extract 2> /dev/null && \
 		mv squashfs-root nvim && \
-		ln -s $(BUILD_PATH)/src/nvim/AppRun $(NVIM_PATH) )
+		cp $(BUILD_PATH)/src/nvim/AppRun $(NVIM_PATH) )
 	@test -e $(DEIN_PATH) || (\
 		mkdir -p $(BUILD_PATH)/tmp && cd $(BUILD_PATH)/tmp && \
 		curl https://raw.githubusercontent.com/Shougo/dein.vim/$(DEIN_VERSION)/bin/installer.sh > installer.sh && \
@@ -36,8 +39,6 @@ neovim-install:
 neovim-test:
 	@printf '$(YELLOW_ON)\n==> Start to test neovim...\n$(COLOR_OFF)'
 	@which nvim
-	@echo "$(DOTFILEDIR)/nvim"
-	@echo `readlink $(NVIMRC_PATH)`
 	@test "$(DOTFILEDIR)/nvim" = `readlink $(NVIMRC_PATH)`
 	@test $$? = 0 && \
 		printf '$(GREEN_ON)✔ Test neovim successfully!\n$(COLOR_OFF)' || \

@@ -3,29 +3,30 @@ RED_ON = \033[31m
 GREEN_ON = \033[32m
 YELLOW_ON = \033[33m
 COLOR_OFF = \033[0m
-SETUP_TARGETS +=
-INSTALL_TARGETS +=
 .DEFAULT_GOAL := install
-BUILD_PATH = $(HOME)/build
+BIN_PATH = $(DOTFILEDIR)/bin
+BUILD_PATH = $(DOTFILEDIR)/build
+
 
 # OS specific installations
 ifeq ($(shell uname), Darwin)
-	include makefiles/atom.mk
-	include makefiles/brew.mk
+	include atom/Makefile
+	include osx/Makefile
 else
-	include makefiles/direnv.mk
+	include direnv/Makefile
 endif
 
+
 # Common installations
-include makefiles/aws.mk
-include makefiles/git.mk
-include makefiles/peco.mk
-include makefiles/pt.mk
-include makefiles/ssh.mk
-include makefiles/tmux.mk
-include makefiles/vim.mk
-include makefiles/neovim.mk
-include makefiles/zsh.mk
+include anyenv/Makefile
+include aws/Makefile
+include git/Makefile
+include pt/Makefile
+include ssh/Makefile
+include tmux/Makefile
+include vim/Makefile
+include nvim/Makefile
+include zsh/Makefile
 
 
 setup: $(SETUP_TARGETS)

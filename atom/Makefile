@@ -1,3 +1,6 @@
+DOTFILEDIR ?= $(realpath ../$(dir $(lastword $(MAKEFILE_LIST))))
+
+
 atom-setup:
 	@printf '$(YELLOW_ON)\n==> Start to setup atom...\n$(COLOR_OFF)'
 	@test "$(DOTFILEDIR)/atom/.atom" = `readlink $(HOME)/.atom` || ( \
