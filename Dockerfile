@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
 RUN apt-get update -y && apt-get install -y \
     build-essential \
     curl \
@@ -8,6 +10,5 @@ RUN apt-get update -y && apt-get install -y \
     zsh \
     tmux
 
-RUN chsh -s /bin/zsh
-ADD . /dotfiles
-WORKDIR /dotfiles
+ADD . /root/.dotfiles
+WORKDIR /root/.dotfiles

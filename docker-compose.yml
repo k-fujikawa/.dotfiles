@@ -7,4 +7,9 @@ services:
       context: .
     volumes:
       - $PWD:/dotfiles
-    command: /bin/zsh
+    command: /bin/zsh -c """
+      make install &&
+      make install &&
+      source ~/.zshrc &&
+      make test
+      """
