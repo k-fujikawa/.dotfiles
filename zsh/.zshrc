@@ -1,13 +1,13 @@
-source /etc/profile
 FILEPATH=`readlink $HOME/.zshrc`
 export DOTFILEDIR=$(cd $(dirname $(dirname $FILEPATH)) && pwd)
-source $DOTFILEDIR/zsh/zshrc.base
-source $DOTFILEDIR/zsh/zshrc.env
-if [ -e ~/.zshrc.local  ]; then
-    source ~/.zshrc.local
-fi
-if [ "$(uname)" = "Darwin" ]; then
-    source $DOTFILEDIR/zsh/zshrc.mac
-else
-    source $DOTFILEDIR/zsh/zshrc.linux
-fi
+
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
+include ~/.zplug/init.zsh
+include /etc/profile
+include $DOTFILEDIR/zsh/zplug.zsh
+include $DOTFILEDIR/zsh/prezto.zsh
+include ~/.zplug/repos/sorin-ionescu/prezto/init.zsh
+include $DOTFILEDIR/zsh/config.zsh
