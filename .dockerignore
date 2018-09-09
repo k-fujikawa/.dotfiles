@@ -7,3 +7,5 @@ atom/.atom/packages/
 atom/.atom/projects.cson
 atom/.atom/storage/
 atom/.atom/blob-store/
+bin
+build
