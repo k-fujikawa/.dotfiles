@@ -1,5 +1,3 @@
-zstyle ':prezto:module:git:status:ignore' submodules 'all'
-zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -9,5 +7,10 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'git' \
+  'docker' \
+  'syntax-highlighting' \
+  'history-substring-search' \
   'prompt'
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:*:*' color 'yes'
+zstyle ':prezto:module:prompt' theme 'paradox'
