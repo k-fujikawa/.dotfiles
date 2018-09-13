@@ -6,13 +6,15 @@
 
 ```bash
 git clone git@github.com:k-fujikawa/.dotfiles.git
-cd dotfiles
+cd .dotfiles
 make
 ```
 
 ## Test to install .dotfiles with Docker
 
 ```bash
-make build
-make run
+docker-compose build
+docker-compose run test /bin/zsh
+make
+make test
 ```
