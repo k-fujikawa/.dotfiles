@@ -2,6 +2,7 @@
 set t_Co=256
 colorscheme molokai
 set number
+set ttimeoutlen=50
 
 " ====  Encoding  ====
 set enc=utf-8
