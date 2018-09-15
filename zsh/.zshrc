@@ -8,6 +8,4 @@ include () {
 include ~/.zplug/init.zsh
 include /etc/profile
 include $DOTFILEDIR/zsh/zplug.zsh
-include $DOTFILEDIR/zsh/prezto.zsh
-include ~/.zplug/repos/sorin-ionescu/prezto/init.zsh
 include $DOTFILEDIR/zsh/config.zsh
