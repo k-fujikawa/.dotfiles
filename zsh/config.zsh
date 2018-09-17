@@ -21,6 +21,11 @@ if [ -e $HOME/.anyenv ]; then
     eval "$(anyenv init -)"
 fi
 
+# ====  Default tmux session  ====
+function ws() {
+    tmux a -t ws || tmux new -s ws
+}
+
 # ====  Hotfix: Tab completion eats a line  ====
 # ----  https://github.com/sorin-ionescu/prezto/issues/1245  ----
 function revert-expand-or-complete {
