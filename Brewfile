@@ -1,14 +1,15 @@
-tap "sanemat/font"
+tap "caskroom/fonts"
 
 brew "zsh"
 brew "nvim"
 brew "git-lfs"
 brew "tig"
+brew "tmux"
 brew "direnv"
 brew "mas"
 brew "htop"
 brew "heroku"
-brew "ricty", args: ["with-powerline"]
+brew "wget"
 
 cask "iterm2"
 cask "google-japanese-ime"
@@ -20,6 +21,14 @@ cask "atom"
 cask "docker"
 cask "google-backup-and-sync"
 cask "xquartz"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
 
+mas "Keynote", id: 409183694
+mas "Xcode", id: 497799835
 mas "Slack", id: 803453959
 mas "Magnet", id: 441258766
+mas "Trello", id:1278508951
+mas "Kindle", id: 405399194
+mas "WiFi Explorer", id: 494803304
+mas "1Password", id: 1333542190
