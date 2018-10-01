@@ -1,22 +1,15 @@
 # ====  Setup keybinds  ====
 # ----  anyframe  ----
-bindkey '^xb' anyframe-widget-cdr
-bindkey '^x^b' anyframe-widget-checkout-git-branch
+bindkey '^r' anyframe-widget-put-history
+bindkey '^g' anyframe-widget-cd-ghq-repository
+bindkey '^k' anyframe-widget-kill
+bindkey '^b' anyframe-widget-checkout-git-branch
 
-bindkey '^xr' anyframe-widget-execute-history
-bindkey '^x^r' anyframe-widget-execute-history
-
-bindkey '^xi' anyframe-widget-put-history
-bindkey '^x^i' anyframe-widget-put-history
-
-bindkey '^xg' anyframe-widget-cd-ghq-repository
-bindkey '^x^g' anyframe-widget-cd-ghq-repository
-
-bindkey '^xk' anyframe-widget-kill
-bindkey '^x^k' anyframe-widget-kill
-
+bindkey '^xc' anyframe-widget-cdr
 bindkey '^xe' anyframe-widget-insert-git-branch
-bindkey '^x^e' anyframe-widget-insert-git-branch
+bindkey '^xs' anyframe-widget-select-widget
 
 bindkey '^[[A' history-substring-search-up	
 bindkey '^[[B' history-substring-search-down
+
+export FZF_DEFAULT_OPTS='--reverse --no-sort'

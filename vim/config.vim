@@ -36,6 +36,7 @@ set cursorline
 set showmatch
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l
+set textwidth=0
 nmap <CR> o<ESC>
 nnoremap j gj
 nnoremap k gk
