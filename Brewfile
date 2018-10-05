@@ -25,7 +25,6 @@ cask "font-source-code-pro"
 cask "font-source-code-pro-for-powerline"
 
 mas "Keynote", id: 409183694
-mas "Xcode", id: 497799835
 mas "Slack", id: 803453959
 mas "Magnet", id: 441258766
 mas "Trello", id:1278508951
