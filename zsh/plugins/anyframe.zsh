@@ -12,4 +12,4 @@ bindkey '^xs' anyframe-widget-select-widget
 bindkey '^[[A' history-substring-search-up	
 bindkey '^[[B' history-substring-search-down
 
-export FZF_DEFAULT_OPTS='--reverse --no-sort'
+export FZF_DEFAULT_OPTS='--reverse --no-sort --exact'
