@@ -12,6 +12,7 @@ BUILD_PATH = $(DOTFILEDIR)/build
 ifeq ($(shell uname), Darwin)
 	include atom/Makefile
 	include osx/Makefile
+	include hyper/Makefile
 else
 	include direnv/Makefile
 endif
