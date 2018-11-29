@@ -1,7 +1,10 @@
-# ====  Setup PATH  ====
+# ====  Setup essential environment variables  ====
 export PATH=~/.dotfiles/bin:$PATH
 export UID
 export GID
+export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
+export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # ====  Setup pushd  ====
 setopt auto_pushd

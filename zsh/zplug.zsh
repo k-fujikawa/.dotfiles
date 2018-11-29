@@ -21,5 +21,4 @@ fi
 zplug load
 
 source $DOTFILEDIR/zsh/plugins/prezto.zsh
-source ~/.zplug/repos/sorin-ionescu/prezto/init.zsh
 source $DOTFILEDIR/zsh/plugins/anyframe.zsh
