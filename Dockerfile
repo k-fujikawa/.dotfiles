@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 
 RUN apt-get update -y && apt-get install -y \
     build-essential \
@@ -8,7 +8,8 @@ RUN apt-get update -y && apt-get install -y \
     git \
     vim \
     zsh \
-    tmux
+    tmux \
+    language-pack-ja
 
 ADD . /root/.dotfiles
 WORKDIR /root/.dotfiles
