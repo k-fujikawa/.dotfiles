@@ -10,6 +10,8 @@ RUN apt-get update -y && apt-get install -y \
     zsh \
     tmux \
     language-pack-ja
+RUN apt-get install -y gawk
+RUN chsh -s /bin/zsh
 
 ADD . /root/.dotfiles
 WORKDIR /root/.dotfiles
