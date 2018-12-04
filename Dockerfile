@@ -9,8 +9,9 @@ RUN apt-get update -y && apt-get install -y \
     vim \
     zsh \
     tmux \
+    gawk \
+    zip \
     language-pack-ja
-RUN apt-get install -y gawk
 RUN chsh -s /bin/zsh
 
 ADD . /root/.dotfiles
