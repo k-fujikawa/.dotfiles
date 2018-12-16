@@ -7,7 +7,5 @@ services:
       context: .
     command: /bin/zsh -c """
       make install &&
-      make install &&
-      source ~/.zshrc &&
-      make test
+      make install
       """
