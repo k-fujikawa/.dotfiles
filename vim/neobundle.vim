@@ -25,6 +25,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'w0rp/ale'
 
 if(!empty(neobundle#get_not_installed_bundle_names()))
   echomsg 'Not installed bundles: '
@@ -41,3 +42,4 @@ source $DOTFILEDIR/vim/plugins/nerdtree.vim
 source $DOTFILEDIR/vim/plugins/neocomplcache.vim
 source $DOTFILEDIR/vim/plugins/airline.vim
 source $DOTFILEDIR/vim/plugins/indent.vim
+source $DOTFILEDIR/vim/plugins/ale.vim
