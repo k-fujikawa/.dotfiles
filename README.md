@@ -1,6 +1,6 @@
 # .dotfiles
 
-[![CircleCI](https://circleci.com/gh/k-fujikawa/.dotfiles.svg?style=svg)](https://circleci.com/gh/k-fujikawa/.dotfiles)
+[![CircleCI](https://circleci.com/gh/k-fujikawa/.dotfiles.svg?style=shield)](https://circleci.com/gh/k-fujikawa/.dotfiles)
 
 ## Setup
 
