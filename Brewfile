@@ -1,4 +1,5 @@
 tap "caskroom/fonts"
+tap "heroku/brew"
 
 brew "zsh"
 brew "nvim"

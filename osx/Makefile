@@ -1,4 +1,4 @@
-BREW_PATH = /usr/local/bin/brew
+BREW_PATH := /usr/local/bin/brew
 
 
 brew-install:
