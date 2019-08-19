@@ -56,3 +56,9 @@ autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+if has('mouse_sgr')
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+endif
