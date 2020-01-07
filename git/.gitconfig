@@ -22,3 +22,5 @@
     tool="vimdiff"
 [ghq]
 	root = ~/git
+[credential]
+	helper = cache
