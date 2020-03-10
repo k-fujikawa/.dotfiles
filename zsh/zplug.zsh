@@ -10,7 +10,7 @@ zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
 
 zplug "plugins/git", from:oh-my-zsh
-zplug "motemen/ghq", as:command, from:gh-r
+zplug "x-motemen/ghq", as:command, from:gh-r
 zplug "b4b4r07/enhancd", use:enhancd.sh
 zplug "powerline/powerline", use:"powerline/bindings/zsh"
 
