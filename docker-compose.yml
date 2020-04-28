@@ -5,6 +5,8 @@ services:
     network_mode: "bridge"
     build:
       context: .
+    volumes:
+      - $PWD:/root/.dotfiles
     command: /bin/zsh -c """
       make install &&
       make install

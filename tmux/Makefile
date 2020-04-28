@@ -1,6 +1,6 @@
 tmux-setup:
 	@printf '$(YELLOW_ON)\n==> Start to setup tmux...\n$(COLOR_OFF)'
-	@test "$(DOTFILEDIR)/tmux/.tmux.conf" = `readlink $(HOME)/.tmux.conf` || ( \
+	@test "$(DOTFILEDIR)/tmux/.tmux.conf" = "`readlink $(HOME)/.tmux.conf`" || ( \
 		ln -sf $(DOTFILEDIR)/tmux/.tmux.conf $(HOME)/.tmux.conf)
 	@test -e ~/.tmux/plugins/tpm || ( \
 		mkdir -p ~/.tmux/plugins && \

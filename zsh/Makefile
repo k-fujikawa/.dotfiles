@@ -6,7 +6,7 @@ ZSH_URL = http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.gz/d
 
 zsh-setup:
 	@printf '$(YELLOW_ON)\n==> Start to setup zsh...\n$(COLOR_OFF)'
-	@test "$(DOTFILEDIR)/zsh/.zshrc" = `readlink $(HOME)/.zshrc` || ( \
+	@test "$(DOTFILEDIR)/zsh/.zshrc" = "`readlink $(HOME)/.zshrc`" || ( \
 		ln -sf $(DOTFILEDIR)/zsh/.zshrc $(HOME)/.zshrc)
 	@test $$? = 0 && \
 		printf '$(GREEN_ON)✔ Setup zsh successfully!\n$(COLOR_OFF)' || \

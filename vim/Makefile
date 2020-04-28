@@ -3,7 +3,7 @@ VIMPROC_PATH = $(HOME)/.vim/bundle/vimproc.vim
 
 
 vim-setup:
-	@test "$(DOTFILEDIR)/vim/.vimrc" = `readlink $(HOME)/.vimrc` || ( \
+	@test "$(DOTFILEDIR)/vim/.vimrc" = "`readlink $(HOME)/.vimrc`" || ( \
 		ln -sf $(DOTFILEDIR)/vim/.vimrc $(HOME)/.vimrc)
 
 
