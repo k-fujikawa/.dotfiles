@@ -5,12 +5,11 @@ NVIM_VERSION = v0.3.1
 NVIM_PATH = $(BIN_PATH)/nvim
 NVIMRC_PATH = $(HOME)/.config/nvim
 DEIN_VERSION = 2.0
-DEIN_PATH = $(BUILD_PATH)/tmp/installer.sh
 
 
 neovim-setup:
 	@printf '$(YELLOW_ON)\n==> Start to setup neovim...\n$(COLOR_OFF)'
-	@test "$(DOTFILEDIR)/nvim" = `readlink $(NVIMRC_PATH)` || ( \
+	@test "$(DOTFILEDIR)/nvim" = "`readlink $(NVIMRC_PATH)`" || ( \
 		mkdir -p $(HOME)/.config && \
 		ln -sf $(DOTFILEDIR)/nvim $(NVIMRC_PATH))
 	@test $$? = 0 && \
@@ -27,13 +26,18 @@ neovim-install:
 		./nvim.appimage --appimage-extract 2> /dev/null && \
 		mv squashfs-root nvim && \
 		cp $(BUILD_PATH)/src/nvim/AppRun $(NVIM_PATH) )
-	@test -e $(DEIN_PATH) || (\
+	@test $$? = 0 && \
+		printf '$(GREEN_ON)✔ Install neovim successfully!\n$(COLOR_OFF)' || \
+		(printf '$(RED_ON)✘ Failed to install neovim...\n$(COLOR_OFF)' && exit 1)
+
+dein-install:
+	@test -e ~/.cache/dein/repos/github.com/Shougo/dein.vim || (\
 		mkdir -p $(BUILD_PATH)/tmp && cd $(BUILD_PATH)/tmp && \
 		curl https://raw.githubusercontent.com/Shougo/dein.vim/$(DEIN_VERSION)/bin/installer.sh > installer.sh && \
 		sh ./installer.sh ~/.cache/dein )
 	@test $$? = 0 && \
-		printf '$(GREEN_ON)✔ Install neovim successfully!\n$(COLOR_OFF)' || \
-		(printf '$(RED_ON)✘ Failed to install neovim...\n$(COLOR_OFF)' && exit 1)
+		printf '$(GREEN_ON)✔ Install dein successfully!\n$(COLOR_OFF)' || \
+		(printf '$(RED_ON)✘ Failed to install dein...\n$(COLOR_OFF)' && exit 1)
 
 
 neovim-test:
@@ -47,4 +51,5 @@ neovim-test:
 
 SETUP_TARGETS += neovim-setup
 INSTALL_TARGETS += neovim-install
+INSTALL_TARGETS += dein-install
 TEST_TARGETS += neovim-test

@@ -11,6 +11,12 @@ repo = 'tomasr/molokai'
 repo = 'Shougo/neocomplcache'
 
 [[plugins]]
+repo = 'Shougo/neosnippet'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'itchyny/landscape.vim'
 
 [[plugins]]
