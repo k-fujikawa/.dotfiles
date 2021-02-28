@@ -2,13 +2,15 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = 'source $DOTFILEDIR/nvim/plugins/nerdtree.vim'
+
+[[plugins]]
 repo = 'Shougo/neocomplcache'
+hook_add = 'source $DOTFILEDIR/nvim/plugins/neocomplcache.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
@@ -17,13 +19,25 @@ repo = 'Shougo/neosnippet'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
 repo = 'itchyny/landscape.vim'
+
+[[plugins]]
+repo = 'bling/vim-airline'
+hook_add = 'source $DOTFILEDIR/nvim/plugins/airline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'bling/vim-airline'
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = 'source $DOTFILEDIR/nvim/plugins/indent.vim'
+
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'hynek/vim-python-pep8-indent'
+
+[[plugins]]
+repo = 'w0rp/ale'

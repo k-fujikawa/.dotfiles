@@ -1,0 +1,30 @@
+{
+    "docker.explorerRefreshInterval": 3000,
+    "editor.largeFileOptimizations": false,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.ipynb_checkpoints": true
+    },
+    "terminal.integrated.inheritEnv": false,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.testing.pytestEnabled": true,
+    "python.dataScience.askForKernelRestart": false,
+    "[yaml]":  {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": false
+    },
+    "python.linting.flake8Enabled": true,
+    "workbench.startupEditor": "welcomePage",
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "jupyter.askForKernelRestart": false,
+    "python.testing.cwd": "",
+    "window.zoomLevel": 0,
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter-notebook",
+        "filenamePattern": "*.ipynb"
+      }
+    ]
+}
