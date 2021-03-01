@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 

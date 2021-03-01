@@ -1,6 +1,6 @@
 version: "2.3"
 services:
-  test:
+  ubuntu:
     image: dotfiles
     network_mode: "bridge"
     build:

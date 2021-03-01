@@ -38,8 +38,8 @@ end
 
 call neobundle#end()
 
-source $DOTFILEDIR/vim/plugins/nerdtree.vim
-source $DOTFILEDIR/vim/plugins/neocomplcache.vim
-source $DOTFILEDIR/vim/plugins/airline.vim
-source $DOTFILEDIR/vim/plugins/indent.vim
-source $DOTFILEDIR/vim/plugins/ale.vim
+source $DOTFILES_DIR/vim/plugins/nerdtree.vim
+source $DOTFILES_DIR/vim/plugins/neocomplcache.vim
+source $DOTFILES_DIR/vim/plugins/airline.vim
+source $DOTFILES_DIR/vim/plugins/indent.vim
+source $DOTFILES_DIR/vim/plugins/ale.vim
