@@ -26,6 +26,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'w0rp/ale'
+NeoBundle 'cespare/vim-toml'
 
 if(!empty(neobundle#get_not_installed_bundle_names()))
   echomsg 'Not installed bundles: '

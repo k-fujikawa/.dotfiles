@@ -2,6 +2,7 @@
 export PATH=~/.dotfiles/bin:$PATH
 export UID
 export GID
+export HOST
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -10,6 +11,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 setopt auto_pushd
 setopt auto_cd
 setopt pushd_ignore_dups
+setopt +o nomatch
 
 # ====  Setup history  ====
 export HISTSIZE=1000000
