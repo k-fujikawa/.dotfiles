@@ -6,6 +6,7 @@ export HOST
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # ====  Setup pushd  ====
