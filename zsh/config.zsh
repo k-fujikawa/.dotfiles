@@ -33,6 +33,11 @@ if [ -e $HOME/.anyenv/envs/pyenv ]; then
     eval "$(pyenv init --path)"
 fi
 
+# ====  Setup anyenv  ====
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
+
 # ====  Default tmux session  ====
 function ws() {
     tmux a -t ws || tmux new -s ws
