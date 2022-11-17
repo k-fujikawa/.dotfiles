@@ -8,6 +8,7 @@ DIRENV_PATH = $(BIN_PATH)/direnv
 direnv-install:
 	@printf '$(YELLOW_ON)\n==> Start to install direnv...\n$(COLOR_OFF)'
 	@test -e $(DIRENV_PATH) || ( \
+		mkdir -p $(BIN_PATH) && \
 		cd $(BIN_PATH) ; \
 		curl -L $(DIRENV_URL) -o direnv ; chmod +x direnv)
 	@test -e $(DIRENV_PATH) && \

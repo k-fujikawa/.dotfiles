@@ -4,7 +4,7 @@ GREEN_ON = \033[32m
 YELLOW_ON = \033[33m
 COLOR_OFF = \033[0m
 .DEFAULT_GOAL := install
-BIN_PATH = $(DOTFILEDIR)/bin
+BIN_PATH = ~/.bin
 BUILD_PATH = $(DOTFILEDIR)/build
 
 

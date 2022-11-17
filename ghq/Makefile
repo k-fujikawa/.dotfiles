@@ -15,7 +15,7 @@ GHQ_URL = https://github.com/x-motemen/ghq/releases/download/$(GHQ_VERSION)/$(GH
 
 ghq-install:
 	@printf '$(YELLOW_ON)\n==> Start to install ghq...\n$(COLOR_OFF)'
-	@echo ${GHQ_URL}
+	@echo $(GHQ_PATH)
 	@test -e $(GHQ_PATH) || (mkdir -p $(BIN_PATH) && \
 		cd $(BIN_PATH) && \
 		curl -L $(GHQ_URL) -o $(GHQ_DIR_NAME).zip && \
