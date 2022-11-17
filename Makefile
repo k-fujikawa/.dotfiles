@@ -27,6 +27,8 @@ include tmux/Makefile
 include vim/Makefile
 include nvim/Makefile
 include zsh/Makefile
+include fzf/Makefile
+include ghq/Makefile
 
 
 setup: $(SETUP_TARGETS)

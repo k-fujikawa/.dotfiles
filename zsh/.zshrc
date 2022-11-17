@@ -13,3 +13,5 @@ include /etc/profile
 include $DOTFILEDIR/zsh/zplug.zsh
 include $DOTFILEDIR/zsh/config.zsh
 include ~/.zshrc.local
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

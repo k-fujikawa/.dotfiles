@@ -1,5 +1,5 @@
 # ====  Setup essential environment variables  ====
-export PATH=~/.dotfiles/bin:$PATH
+export PATH=~/.bin:$PATH
 export UID
 export GID
 export HOST
@@ -36,6 +36,12 @@ fi
 # ====  Setup anyenv  ====
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook zsh)"
+fi
+
+# ====  Setup fzf  ====
+if [ -e $HOME/.fzf ]; then
+    export PATH=$HOME/.anyenv/bin:$PATH
+    eval "$(anyenv init -)"
 fi
 
 # ====  Default tmux session  ====
