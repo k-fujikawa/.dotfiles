@@ -44,6 +44,13 @@ if [ -e $HOME/.fzf ]; then
     eval "$(anyenv init -)"
 fi
 
+# ====  Set RUNTIME  ====
+if nvidia-smi &> /dev/null; then
+    export RUNTIME=nvidia
+else
+    export RUNTIME=
+fi
+
 # ====  Default tmux session  ====
 function ws() {
     tmux a -t ws || tmux new -s ws
