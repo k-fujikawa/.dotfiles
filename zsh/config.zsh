@@ -9,6 +9,7 @@ export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PYTHON_KEYRING_BACKEND=keyring.backends.fail.Keyring
+export PYTHONBREAKPOINT=ipdb.set_trace
 export TZ=Asia/Tokyo
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
