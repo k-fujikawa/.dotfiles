@@ -77,3 +77,9 @@ function revert-expand-or-complete {
     zle expand-or-complete
 }
 zle -N expand-or-complete-with-indicator revert-expand-or-complete
+
+# ====  Hotfix: docker compose autocompletion  ====
+function dc () {
+    docker compose "$@"
+}
+compdef _files dc
