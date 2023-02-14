@@ -31,9 +31,9 @@ if [ -e $HOME/.anyenv ]; then
     export PATH=$HOME/.anyenv/bin:$PATH
     eval "$(anyenv init -)"
 fi
-if [ -e $HOME/.anyenv/envs/pyenv ]; then
-    eval "$(pyenv init --path)"
-fi
+# if [ -e $HOME/.anyenv/envs/pyenv ]; then
+#     eval "$(pyenv init --path)"
+# fi
 
 # ====  Setup anyenv  ====
 if command -v direnv &> /dev/null; then
