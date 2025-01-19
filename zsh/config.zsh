@@ -51,6 +51,7 @@ if nvidia-smi &> /dev/null; then
     export RUNTIME=nvidia
 else
     export RUNTIME=
+fi
 
 # ====  Setup anyenv  ====
 if command -v pyenv &> /dev/null; then
