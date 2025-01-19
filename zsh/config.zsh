@@ -51,12 +51,23 @@ if nvidia-smi &> /dev/null; then
     export RUNTIME=nvidia
 else
     export RUNTIME=
+
+# ====  Setup anyenv  ====
+if command -v pyenv &> /dev/null; then
+    eval "$(pyenv virtualenv-init -)"
 fi
 
 # ====  Default tmux session  ====
 function ws() {
     tmux a -t ws || tmux new -s ws
 }
+
+# ====  PNPM  ====
+export PNPM_HOME=$HOME/Library/pnpm
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 # ====  symlink SSH_AUTH_SOCK  ====
 agent="$HOME/.ssh/agent"
