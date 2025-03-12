@@ -26,6 +26,9 @@ setopt share_history
 setopt hist_save_nodups
 setopt hist_ignore_all_dups
 
+# ====  Setup vscode  ====
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # ====  Setup anyenv  ====
 if [ -e $HOME/.anyenv ]; then
     export PATH=$HOME/.anyenv/bin:$PATH

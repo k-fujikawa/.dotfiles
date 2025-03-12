@@ -14,6 +14,7 @@ endif
 
 pt-install:
 	@printf '$(YELLOW_ON)\n==> Start to install pt...\n$(COLOR_OFF)'
+	@mkdir -p $(BIN_PATH)
 	@test -e $(PT_PATH) || (cd $(BIN_PATH) && \
 		curl -L $(PT_URL) -o pt.tar.gz && \
 		tar zxvf pt.tar.gz && \
