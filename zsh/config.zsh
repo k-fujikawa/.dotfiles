@@ -27,7 +27,9 @@ setopt hist_save_nodups
 setopt hist_ignore_all_dups
 
 # ====  Setup vscode  ====
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+if [[ "$TERM_PROGRAM" = "vscode" ]]; then
+    unset RPROMPT
+fi
 
 # ====  Setup anyenv  ====
 if [ -e $HOME/.anyenv ]; then
